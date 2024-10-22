@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input, select {
+            margin: 10px;
+            padding: 10px;
+            width: 100px;
+        }
+        input[type="submit"] {
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Basic Calculator</h1>
+    <input type="number" id="leftValue" placeholder="Left operand" min="0" required>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="number" id="rightValue" placeholder="Right operand" min="0" required>
+    <input type="submit" value="Try me!" id="calculateButton">
+
+    <script>
+        let timer;
+
+        function resetTimer() {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                alert('Please, use me...');
+            }, 30000);
+        }
+
+        document.getElementById('calculateButton').addEventListener('click', function() {
+            const leftValue = parseInt(document.getElementById('leftValue').value);
+            const operator = document.getElementById('operator').value;
+            const rightValue = parseInt(document.getElementById('rightValue').value);
+
+            if (isNaN(leftValue) || isNaN(rightValue) || leftValue < 0 || rightValue < 0) {
+                alert('Error :(');
+                return;
+            }
+
+            let result;
+
+            if ((operator === '/' || operator === '%') && rightValue === 0) {
+                alert("It’s over 9000!");
+                console.log("It’s over 9000!");
+                return;
+            }
+
+            switch (operator) {
+                case '+':
+                    result = leftValue + rightValue;
+                    break;
+                case '-':
+                    result = leftValue - rightValue;
+                    break;
+                case '*':
+                    result = leftValue * rightValue;
+                    break;
+                case '/':
+                    result = leftValue / rightValue;
+                    break;
+                case '%':
+                    result = leftValue % rightValue;
+                    break;
+                default:
+                    return;
+            }
+
+            alert(`Result: ${result}`);
+            console.log(result);
+            resetTimer(); // Reset timer after a calculation
+        });
+
+        // Reset timer on any user interaction
+        document.body.addEventListener('click', resetTimer);
+        document.body.addEventListener('keypress', resetTimer);
+        document.body.addEventListener('input', resetTimer);
+    </script>
+
+</body>
+</html>
