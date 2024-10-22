@@ -1,0 +1,48 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.bg-image1 {
+    background-image: url('https://static01.nyt.com/images/2024/09/26/multimedia/24styles-moodeng-bite-bfmh/24styles-moodeng-bite-bfmh-superJumbo.jpg?quality=75&auto=webp');
+}
+
+.bg-image2 {
+    background-image: url('https://www.crypto-news-flash.com/wp-content/uploads/2024/09/moodeng-1200x675.webp');
+}
+
+.message {
+    font-size: 2em;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.content-section {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-section .message {
+    color: white;
+    font-size: 2em;
+}
