@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>supsupha's portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="supsupha.css">
+    </head>
+    <body>
+        <header>
+          <nav>
+              <ul class="sidebar">
+                  <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                  <li><a href="#about-me">ABOUT ME</a></li>
+                  <li><a href="#portfolio">PORTFOLIO</a></li>
+                  <li><a href="#contact">CONTACT</a></li>
+              </ul>
+              <ul>
+                  <li><a href="index.html">SUPHANAN S.</a></li>
+                  <li class="hideOnMobile"><a href="#about-me">ABOUT ME</a></li>
+                  <li class="hideOnMobile"><a href="#portfolio">PORTFOLIO</a></li>
+                  <li class="hideOnMobile"><a href="#contact">CONTACT</a></li>
+                  <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+              </ul>
+          </nav>
+  
+          <script>
+              function showSidebar() {
+                  const sidebar = document.querySelector('.sidebar')
+                  sidebar.style.display = 'flex'
+              }
+              function hideSidebar() {
+                  const sidebar = document.querySelector('.sidebar')
+                  sidebar.style.display = 'none'
+              }
+          </script>
+        </header>
+
+        <section id="about-me">
+            <h2 style="color: steelblue;">ABOUT ME</h2>
+            <div class="profile">
+                <img src="img/profile-img.jpg" alt="Profile Image" class="profile-img">
+                <div class="profile-info">
+                  <h1 style="color: steelblue; text-align: center;">PERSONAL INFORMATION</h1>
+                  <p>NAME: Suphanan Supharat</p>
+                  <p>BIRTHDAY: 1 September 2006</p>
+                  <h1 style="color: steelblue; text-align: center;">EDUCATION</h1>
+                  <p>SCHOOL: Triamudomsuksapattanakarn School</p>
+                  <p>PROGRAM: English-Chinese</p>
+                  <p>GPA: 3.8</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2 style="color: steelblue;">PORTFOLIO</h2>
+            <div class="portfolio-container">
+                <img src="img/cer1.jpg" alt="Certificate 1">
+                <img src="img/cer2.jpg" alt="Certificate 2">
+                <img src="img/cer3.jpg" alt="Certificate 3">
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 style="color: steelblue;">CONTACT</h2>
+            <ul class="contact-list">
+                <li>Email: suphanan148@gmail.com</li>
+                <li>Phone: 098-250-9170</li>
+                <li>Instagram: @suphanansup</li>
+                <li>Facebook: โนอาห์ สุภารัตน์</li>
+            </ul>
+        </section>
+    </body>
+</html>
