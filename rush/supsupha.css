@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightskyblue;
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: white;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  background-color: white;
+  padding: 10px 0;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  color: lightsteelblue;
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+nav a:hover {
+  color: steelblue;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+}
+
+@media(max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+#about-me, #portfolio, #contact {
+    padding: 100px 20px 50px;
+    text-align: center;
+    color: white;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.profile-info {
+    text-align: left;
+    max-width: 50%;
+}
+
+.portfolio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.portfolio-container img {
+  flex: 1 1 30%;
+  max-width: 30vw;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .portfolio-container img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+#contact .contact-list {
+    list-style: none;
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+@media (max-width: 400px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
